@@ -1,0 +1,21 @@
+<?php
+$ua = strtolower($_SERVER['HTTP_USER_AGENT']);
+if(stripos($ua,'android') !== false) { // && stripos($ua,'mobile') !== false) {
+	echo "<html><head><title>PicSend the only plattform that verifies you get a picture</title></head><body>
+<div align='center'><h1> Sign up</h1>
+<form action='sign_up.php' method='get'>
+<font size='2'><b>First Name:</b><input type='text' id='firstname' width='30%'><br>
+<b>Last Name:</b><input type='text' id='lastname' width='30%'><br>
+<b>Gender: </b><input type='text' id='gender'><br>
+<b>Birthday: </b><input type='text' id='birthday'><br>
+<b>City:</b><input type='text' id='city'><br>
+<b>State: </b><input type='text' id='state'><br><br><input type='submit' value='Sign Up!'></form><br></font>";
+	exit();
+}
+else
+{
+echo "not Android App";
+}
+?>
+<?php
+ ?></body></html>
